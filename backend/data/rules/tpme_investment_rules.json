@@ -1,0 +1,85 @@
+{
+  "version": "2026-08",
+  "dispositif": "soutien_specifique_tpme",
+  "pays": "Maroc",
+
+  "definition_tpme": {
+    "chiffre_affaires_min_mad": 1000000,
+    "chiffre_affaires_max_exclusif_mad": 200000000,
+    "nouvelle_entreprise_age_max_exclusif_ans": 3,
+    "participation_max_grande_entreprise": 0.25,
+    "personne_morale_publique_autorisee": false
+  },
+
+  "eligibilite_projet": {
+    "investissement_min_mad": 1000000,
+    "investissement_max_exclusif_mad": 50000000,
+    "ratio_emplois_min_general": 1.5,
+    "ratio_emplois_min_tourisme": 1.0,
+    "fonds_propres_min": 0.10
+  },
+
+  "prime_emplois": [
+    {
+      "min_inclusif": 2.0,
+      "max_inclusif": 5.0,
+      "taux": 0.05
+    },
+    {
+      "min_exclusif": 5.0,
+      "max_inclusif": 10.0,
+      "taux": 0.07
+    },
+    {
+      "min_exclusif": 10.0,
+      "max_inclusif": null,
+      "taux": 0.10
+    }
+  ],
+
+  "prime_territoriale": {
+    "categorie_A": 0.10,
+    "categorie_B": 0.15
+  },
+
+  "prime_activite_prioritaire": {
+    "taux": 0.10
+  },
+
+  "plafonds": {
+    "taux_global_max": 0.30
+  },
+
+  "references_juridiques": [
+    {
+      "type": "loi_cadre",
+      "numero": "03-22",
+      "description": "Charte de l'investissement"
+    },
+    {
+      "type": "decret",
+      "numero": "2-25-342",
+      "description": "Dispositif de soutien sp?cifique destin? aux TPME"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-51-25",
+      "description": "Branches d'activit? ?ligibles par r?gion"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-52-25",
+      "description": "Liste des activit?s prioritaires"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-53-25",
+      "description": "Pi?ces constitutives du dossier"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-54-25",
+      "description": "Provinces et pr?fectures des cat?gories A et B"
+    }
+  ]
+}

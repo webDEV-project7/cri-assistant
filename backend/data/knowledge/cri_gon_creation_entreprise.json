@@ -1,0 +1,190 @@
+{
+  "dataset_id": "cri_gon_creation_entreprise",
+  "description": "Connaissances officielles du CRI Guelmim-Oued Noun relatives \u00e0 la cr\u00e9ation d\u2019entreprise.",
+  "documents": [
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Cr\u00e9ation d\u2019entreprise\nSection : D\u00e9marche\n\nLa cr\u00e9ation d\u2019entreprise peut \u00eatre r\u00e9alis\u00e9e en ligne au moyen de la plateforme nationale DirectEntreprise.\n\nLe CRI Guelmim-Oued Noun accompagne les porteurs de projet pour :\n- pr\u00e9parer leur dossier ;\n- choisir leur statut juridique ;\n- utiliser la plateforme ;\n- comprendre les d\u00e9marches administratives.",
+      "id": "cri-gon-creation-entreprise-demarches-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "chunk_count": 1,
+        "chunk_index": 1,
+        "document_type": "FAQ officielle \u2014 Cr\u00e9ation d\u2019entreprise",
+        "language": "fr",
+        "publication_date": "Non pr?cis?e",
+        "retrieval_date": "2026-07-29",
+        "section": "procedure",
+        "section_title": "D\u00e9marche",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9ation d\u2019entreprise",
+        "source_url": "https://guelmiminvest.ma/faq/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Cr\u00e9ation d\u2019entreprise\nSection : Documents n\u00e9cessaires\n\nQuels sont les documents n\u00e9cessaires pour cr\u00e9er une entreprise ?\n\nG\u00e9n\u00e9ralement, le dossier comprend :\n- une copie de la CIN ;\n- le certificat n\u00e9gatif du nom commercial ;\n- un justificatif de l\u2019adresse du si\u00e8ge, comme un contrat de bail ou une attestation de domiciliation ;\n- les statuts de la soci\u00e9t\u00e9 ;\n- les autorisations sp\u00e9cifiques lorsque l\u2019activit\u00e9 est r\u00e9glement\u00e9e ;\n- le formulaire de d\u00e9claration de cr\u00e9ation.\n\nLa composition exacte du dossier peut varier selon la forme juridique et l\u2019activit\u00e9.\nLe CRI accompagne les porteurs de projet dans la pr\u00e9paration et la v\u00e9rification des documents.",
+      "id": "cri-gon-creation-entreprise-documents-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "chunk_count": 1,
+        "chunk_index": 1,
+        "document_type": "FAQ officielle \u2014 Cr\u00e9ation d\u2019entreprise",
+        "language": "fr",
+        "publication_date": "Non pr?cis?e",
+        "retrieval_date": "2026-07-29",
+        "section": "required_documents",
+        "section_title": "Documents n\u00e9cessaires",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9ation d\u2019entreprise",
+        "source_url": "https://guelmiminvest.ma/faq/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Cr\u00e9ation d\u2019entreprise\nSection : Choix de la forme juridique\n\nLa cr\u00e9ation d\u2019une entreprise commence par le choix de la forme juridique la plus adapt\u00e9e au projet. Le CRI Guelmim-Oued Noun pr\u00e9sente notamment l\u2019entreprise individuelle, le statut d\u2019auto-entrepreneur, la SNC, la soci\u00e9t\u00e9 en commandite simple, la SARL, la SA, la SAS et la SASU, la soci\u00e9t\u00e9 en commandite par actions, la soci\u00e9t\u00e9 en participation, la succursale et le GIE.",
+      "id": "cri-gon-creation-entreprise-presentation-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "presentation",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Entreprise individuelle\n\nL\u2019entreprise individuelle est exploit\u00e9e en nom personnel par une personne physique. Elle peut servir \u00e0 exercer une profession lib\u00e9rale ou une activit\u00e9 \u00e9conomique. Selon le CRI Guelmim-Oued Noun, aucun apport minimal obligatoire n\u2019est exig\u00e9. L\u2019entreprise et son exploitant ne forment qu\u2019une seule personne et les patrimoines professionnel et personnel sont confondus, ce qui implique une responsabilit\u00e9 ind\u00e9finie pour les dettes de l\u2019activit\u00e9.",
+      "id": "cri-gon-creation-entreprise-individuelle-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "entreprise_individuelle",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Auto-entrepreneur\n\nLe statut d\u2019auto-entrepreneur est une forme simplifi\u00e9e de l\u2019entreprise individuelle. Il s\u2019adresse \u00e0 une personne physique r\u00e9sidente au Maroc qui exerce en son nom et \u00e0 titre individuel une activit\u00e9 ind\u00e9pendante. Selon le CRI, la proc\u00e9dure comprend notamment la v\u00e9rification de l\u2019\u00e9ligibilit\u00e9 de l\u2019activit\u00e9, la pr\u00e9inscription au Registre National de l\u2019Auto-Entrepreneur, la constitution du dossier, son d\u00e9p\u00f4t aupr\u00e8s d\u2019une banque partenaire de Poste Maroc, le suivi en ligne et l\u2019obtention de la carte d\u2019auto-entrepreneur.",
+      "id": "cri-gon-creation-entreprise-auto-entrepreneur-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "auto_entrepreneur",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : SARL\n\nLa soci\u00e9t\u00e9 \u00e0 responsabilit\u00e9 limit\u00e9e (SARL) est une soci\u00e9t\u00e9 commerciale. Elle peut \u00eatre constitu\u00e9e par un associ\u00e9 unique. Elle acquiert la personnalit\u00e9 morale apr\u00e8s son immatriculation au registre du commerce. La responsabilit\u00e9 des associ\u00e9s est limit\u00e9e au montant de leurs apports.",
+      "id": "cri-gon-creation-entreprise-sarl-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "sarl",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Soci\u00e9t\u00e9 anonyme\n\nLa soci\u00e9t\u00e9 anonyme (SA) est notamment adapt\u00e9e aux projets importants. Selon la pr\u00e9sentation du CRI Guelmim-Oued Noun, elle exige au moins cinq actionnaires et la responsabilit\u00e9 de ceux-ci est limit\u00e9e \u00e0 leurs apports. La source indique un capital minimum de 300 000 MAD et pr\u00e9voit \u00e9galement la possibilit\u00e9 d\u2019appel public \u00e0 l\u2019\u00e9pargne dans les conditions applicables.",
+      "id": "cri-gon-creation-entreprise-sa-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "sa",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : SAS et SASU\n\nLa soci\u00e9t\u00e9 par actions simplifi\u00e9e (SAS) offre une organisation et une gestion largement fix\u00e9es par les statuts. Elle peut \u00eatre constitu\u00e9e par une seule personne physique ou morale ; elle prend alors la forme d\u2019une soci\u00e9t\u00e9 par actions simplifi\u00e9e \u00e0 associ\u00e9 unique (SASU). Le CRI rattache cette forme juridique \u00e0 la loi n\u00b0 19-20.",
+      "id": "cri-gon-creation-entreprise-sas-sasu-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 19-20",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "sas_sasu",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : CRI Guelmim-Oued Noun\nTh\u00e8me : Autres formes juridiques\n\nLe CRI Guelmim-Oued Noun pr\u00e9sente \u00e9galement la soci\u00e9t\u00e9 en nom collectif (SNC), la soci\u00e9t\u00e9 en commandite simple, la soci\u00e9t\u00e9 en commandite par actions, la soci\u00e9t\u00e9 en participation, la succursale et le groupement d\u2019int\u00e9r\u00eat \u00e9conomique (GIE). Ces formes diff\u00e8rent notamment par la personnalit\u00e9 morale, la responsabilit\u00e9 des associ\u00e9s, la gestion et les conditions de constitution.",
+      "id": "cri-gon-creation-entreprise-autres-formes-001",
+      "metadata": {
+        "archived": false,
+        "authority": "CRI Guelmim-Oued Noun",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Information institutionnelle officielle",
+        "language": "fr",
+        "legal_reference": "",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "autres_formes_juridiques",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://guelmiminvest.ma/creer-son-entreprise/"
+      }
+    },
+    {
+      "content": "Source officielle : DirectEntreprise / OMPIC\nTh\u00e8me : Cr\u00e9ation d\u2019entreprise par voie \u00e9lectronique\n\nDirectEntreprise est la plateforme officielle de cr\u00e9ation et d\u2019accompagnement des entreprises par voie \u00e9lectronique au Maroc. La plateforme permet d\u2019accomplir une d\u00e9marche unique de cr\u00e9ation et de recevoir les identifiants et documents d\u00e9livr\u00e9s par les administrations et organismes comp\u00e9tents. La mise en service a \u00e9t\u00e9 g\u00e9n\u00e9ralis\u00e9e \u00e0 l\u2019ensemble du Royaume. Les services concernent notamment la r\u00e9servation du nom commercial, la cr\u00e9ation de l\u2019entreprise, la modification de l\u2019entreprise et le d\u00e9p\u00f4t des actes.",
+      "id": "cri-gon-creation-entreprise-directentreprise-001",
+      "metadata": {
+        "archived": false,
+        "authority": "OMPIC / DirectEntreprise",
+        "category": "Cr\u00e9ation d\u2019entreprise",
+        "document_type": "Plateforme officielle nationale",
+        "language": "fr",
+        "legal_reference": "Loi 88-17 ; D\u00e9cret 2-22-92",
+        "official_source": true,
+        "publication_date": "Non pr\u00e9cis\u00e9e par la source",
+        "section": "directentreprise",
+        "source_kind": "cri_gon_web",
+        "source_title": "CRI Guelmim-Oued Noun \u2014 Cr\u00e9er son entreprise",
+        "source_url": "https://www.directentreprise.ma/"
+      }
+    }
+  ]
+}

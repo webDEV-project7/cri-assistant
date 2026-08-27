@@ -1,0 +1,77 @@
+FROM python:3.11-slim
+
+ARG SECTIGO_R36_SHA256=8c54c334b66ba4e426772af4a3f9136c19a1aec729fdb28c535c07a5a4ef22e0
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    CRI_INVEST_CA_BUNDLE=/etc/ssl/certs/cri-invest-ca-bundle.pem
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        openssl \
+        tesseract-ocr \
+        tesseract-ocr-fra \
+        tesseract-ocr-ara \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN groupadd --gid 10001 appgroup \
+    && useradd --uid 10001 \
+               --gid appgroup \
+               --create-home \
+               appuser
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN curl \
+        --fail \
+        --silent \
+        --show-error \
+        --proto '=http' \
+        --max-redirs 0 \
+        --output /tmp/sectigo-r36.der \
+        http://crt.sectigo.com/SectigoPublicServerAuthenticationCADVR36.crt \
+    && echo "${SECTIGO_R36_SHA256}  /tmp/sectigo-r36.der" \
+        | sha256sum --check --strict - \
+    && openssl x509 \
+        -inform DER \
+        -in /tmp/sectigo-r36.der \
+        -out /tmp/sectigo-r36.pem \
+    && openssl verify \
+        -CAfile "$(python -c 'import certifi; print(certifi.where())')" \
+        /tmp/sectigo-r36.pem \
+    && cp \
+        /tmp/sectigo-r36.pem \
+        /usr/local/share/ca-certificates/sectigo-r36.crt \
+    && update-ca-certificates \
+    && cp \
+        "$(python -c 'import certifi; print(certifi.where())')" \
+        "${CRI_INVEST_CA_BUNDLE}" \
+    && printf '\n' >> "${CRI_INVEST_CA_BUNDLE}" \
+    && cat \
+        /tmp/sectigo-r36.pem \
+        >> "${CRI_INVEST_CA_BUNDLE}" \
+    && rm \
+        /tmp/sectigo-r36.der \
+        /tmp/sectigo-r36.pem
+
+ENV SSL_CERT_FILE=/etc/ssl/certs/cri-invest-ca-bundle.pem \
+    REQUESTS_CA_BUNDLE=/etc/ssl/certs/cri-invest-ca-bundle.pem
+
+COPY --chown=appuser:appgroup app ./app
+
+USER appuser
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=10s --timeout=3s --start-period=15s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=2)"
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

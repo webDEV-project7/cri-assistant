@@ -1,0 +1,123 @@
+﻿{
+  "version": "2026-01",
+  "dispositif": "soutien_principal_investissement",
+  "pays": "Maroc",
+
+  "eligibilite": {
+    "condition_1": {
+      "montant_investissement_min_mad": 50000000,
+      "emplois_stables_min": 50
+    },
+    "condition_2": {
+      "emplois_stables_min": 150
+    },
+    "operateur": "OU"
+  },
+
+  "primes_communes": {
+    "ratio_emplois": [
+      {
+        "min_exclusif": 1.0,
+        "max_inclusif": 1.5,
+        "taux": 0.05
+      },
+      {
+        "min_exclusif": 1.5,
+        "max_inclusif": 3.0,
+        "taux": 0.07
+      },
+      {
+        "min_exclusif": 3.0,
+        "max_inclusif": null,
+        "taux": 0.10
+      }
+    ],
+
+    "ratio_genre": {
+      "seuil_min": 0.30,
+      "taux": 0.03
+    },
+
+    "metier_avenir": {
+      "taux": 0.03
+    },
+
+    "investissement_durable": {
+      "taux": 0.03
+    },
+
+    "integration_locale": {
+      "taux": 0.03
+    }
+  },
+
+  "prime_territoriale": {
+    "categorie_A": {
+      "taux": 0.10,
+      "provinces": []
+    },
+    "categorie_B": {
+      "taux": 0.15,
+      "provinces": []
+    },
+    "statut": "liste_provinces_a_completer_depuis_arrete_3_14_23"
+  },
+
+  "prime_sectorielle": {
+    "taux": 0.05,
+    "secteurs": [
+      "tourisme_et_loisirs",
+      "industrie",
+      "agro_industrie",
+      "apiculture",
+      "industrie_pharmaceutique",
+      "numerique",
+      "transport",
+      "outsourcing",
+      "logistique",
+      "industrie_culturelle",
+      "energies_renouvelables",
+      "transformation_et_valorisation_des_dechets"
+    ]
+  },
+
+  "plafonds": {
+    "taux_global_max": 0.30,
+    "energies_eolienne_solaire_hydraulique_montant_max_mad": 30000000
+  },
+
+  "definitions": {
+    "ratio_emplois": "Nombre d'emplois stables créés divisé par le montant total d'investissement exprimé en millions de dirhams.",
+    "ratio_genre": "Masse salariale réservée aux femmes divisée par la masse salariale totale."
+  },
+
+  "references_juridiques": [
+    {
+      "type": "loi_cadre",
+      "numero": "03-22",
+      "description": "Charte de l'investissement",
+      "dahir": "1-22-76",
+      "date": "2022-12-09"
+    },
+    {
+      "type": "decret",
+      "numero": "2-23-1",
+      "date": "2023-02-16"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-12-23",
+      "date": "2023-03-01"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-13-23",
+      "date": "2023-03-01"
+    },
+    {
+      "type": "arrete",
+      "numero": "3-14-23",
+      "date": "2023-03-01"
+    }
+  ]
+}

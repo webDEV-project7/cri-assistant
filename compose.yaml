@@ -1,0 +1,257 @@
+name: cri-assistant
+
+services:
+  proxy:
+    build:
+      context: ./nginx
+    ports:
+      - "127.0.0.1:8080:8080"
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    depends_on:
+      frontend:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    networks:
+      - application_network
+
+  frontend:
+    build:
+      context: ./frontend
+    expose:
+      - "3000"
+    environment:
+      NEXT_PUBLIC_API_URL: /api
+      INTERNAL_API_URL: http://backend:8000
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ./frontend/src:/app/src:ro
+      - ./frontend/public:/app/public:ro
+      - frontend_next_cache:/app/.next
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - application_network
+
+  backend:
+    build:
+      context: ./backend
+    expose:
+      - "8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3:8b}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+      GROQ_TIMEOUT_SECONDS: "${GROQ_TIMEOUT_SECONDS:-60}"
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-v4-pro}
+      DEEPSEEK_TIMEOUT_SECONDS: "${DEEPSEEK_TIMEOUT_SECONDS:-60}"
+      LLM_PROVIDER: ${LLM_PROVIDER:-ollama}
+      LLM_FALLBACK_PROVIDER: ${LLM_FALLBACK_PROVIDER:-ollama}
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      CHROMA_COLLECTION: cri_documents
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+    volumes:
+      - ./backend/app:/app/app:ro
+      - ./backend/data:/app/data:ro
+      - ./backend/tests:/app/tests:ro
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 10s
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+      chroma:
+        condition: service_healthy
+    networks:
+      - application_network
+      - database_network
+      - ai_network
+
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres17_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - database_network
+
+  ollama:
+    image: ollama/ollama:latest
+    gpus: all
+    expose:
+      - "11434"
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test:
+        - CMD
+        - ollama
+        - list
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    networks:
+      - ai_network
+
+  chroma:
+    build:
+      context: ./chroma
+    expose:
+      - "8000"
+    volumes:
+      - chroma_data:/data
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:8000/api/v2/heartbeat
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    networks:
+      - ai_network
+
+
+  loki:
+    image: grafana/loki:3.7.0
+    command:
+      - -config.file=/etc/loki/loki-config.yml
+    expose:
+      - "3100"
+    volumes:
+      - ./observability/loki/loki-config.yml:/etc/loki/loki-config.yml:ro
+      - loki_data:/loki
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    networks:
+      - observability_network
+
+  alloy:
+    image: grafana/alloy:v1.19.0
+    command:
+      - run
+      - --server.http.listen-addr=0.0.0.0:12345
+      - --storage.path=/var/lib/alloy/data
+      - /etc/alloy/config.alloy
+    volumes:
+      - ./observability/alloy/config.alloy:/etc/alloy/config.alloy:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - alloy_data:/var/lib/alloy/data
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    depends_on:
+      - loki
+    networks:
+      - observability_network
+
+  grafana:
+    image: grafana/grafana:13.2.0
+    ports:
+      - "127.0.0.1:3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    depends_on:
+      - loki
+    networks:
+      - application_network
+      - observability_network
+
+volumes:
+  postgres17_data:
+    name: cri_pfa_postgres17_data
+
+  frontend_next_cache:
+    name: cri_pfa_frontend_next_cache
+
+  ollama_data:
+    name: cri_pfa_ollama_data
+
+  chroma_data:
+    name: cri_pfa_chroma_data
+
+
+  loki_data:
+    name: cri_pfa_loki_data
+
+  alloy_data:
+    name: cri_pfa_alloy_data
+
+  grafana_data:
+    name: cri_pfa_grafana_data
+
+networks:
+  application_network:
+    driver: bridge
+
+  database_network:
+    driver: bridge
+    internal: true
+
+  ai_network:
+    driver: bridge
+
+  observability_network:
+    driver: bridge
+    internal: true

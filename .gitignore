@@ -1,0 +1,59 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+node_modules/
+.next/
+*.log# ==========================================================
+# CRI Assistant - fichiers locaux / secrets
+.env.*
+!.env.example
+# Backups locaux
+backups/
+*.bak
+*.backup
+*.old
+*.before-*
+# Python
+.mypy_cache/
+venv/
+# Node / Next.js
+coverage/
+# Logs
+logs/
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+# ==========================================================
+# Archives locales historiques
+_archive_*/
+_backups/
+# Sauvegardes de configuration
+compose.yaml.backup-*
+docker-compose*.backup-*
+# Sauvegardes Chroma / metadata
+*_backup_*.json
+chroma_metadata_incitations_backup_*.json
+# Audits temporaires locaux
+audit_*.txt
+# Fichiers temporaires
+*.tmp
+*.temp
+*.orig
+
+# Ancienne copie locale - backend officiel dans backend/app/
+/request_router.py
+
+# Sauvegardes internes de fichiers
+*.backup*
+*.bak*
+*.broken*
+*.encoding-backup*
+*.disabled-*
+
+# Fichiers de tests manuels locaux
+backend/tests/manual_api/
+diagnostic_*.zip
+observability/grafana/dashboard-backups/

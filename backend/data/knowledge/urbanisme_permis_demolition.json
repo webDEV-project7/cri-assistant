@@ -1,0 +1,150 @@
+{
+  "dataset_id": "urbanisme_permis_demolition",
+  "description": "Connaissances réglementaires officielles relatives au permis de démolition au Maroc.",
+  "documents": [
+    {
+      "id": "cri-gon-urbanisme-demolition-presentation-001",
+      "content": "Source officielle : réglementation marocaine relative à l'urbanisme\nProcédure : Permis de démolition\nCatégorie : Autorisations urbanistiques\nSection : Présentation générale\n\nLe permis de démolition constitue une autorisation administrative encadrant les travaux de démolition d'un bâtiment. Le décret n° 2-18-475 du 12 juin 2019 fixe les procédures et les modalités d'octroi des permis de réfection, de régularisation et de démolition. Le règlement général de construction approuvé par le décret n° 2-18-577 prévoit également le modèle de la décision portant permis de démolition d'un bâtiment.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information réglementaire officielle — Permis de démolition",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": "urbanisme-demolition",
+        "procedure_name": "Permis de démolition",
+        "legal_reference": "Décret n° 2-18-475 du 12 juin 2019 ; décret n° 2-18-577 du 12 juin 2019 ; arrêté conjoint n° 337-20 modifié",
+        "authority": "Administration marocaine chargée de l'urbanisme",
+        "section": "presentation",
+        "section_title": "Présentation générale",
+        "source_title": "Réglementation nationale — Permis de démolition",
+        "source_url": "https://aute.gov.ma/s/a/library/2023-11-01/68d05187-75e9-4a3a-b9a1-b801ddb67e4c.pdf",
+        "chunk_index": 1,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-demolition-documents-002",
+      "content": "Source officielle : arrêté conjoint n° 337-20 modifié\nProcédure : Permis de démolition\nSection : Pièces obligatoires\n\nLe dossier de demande du permis de démolition doit comporter au moment du dépôt :\n- une demande signée par le pétitionnaire ou par toute autre personne dûment mandatée, conformément au modèle fixé en annexe n° 5 du décret n° 2-18-577 ;\n- tout titre justifiant la propriété ou permettant au pétitionnaire de procéder à la démolition projetée ;\n- une copie du contrat conclu avec une entreprise spécialisée en matière de démolition ;\n- une copie du contrat conclu avec un ingénieur spécialisé ;\n- des photographies du bâtiment à démolir et, le cas échéant, celles des bâtiments avoisinants ;\n- le calendrier des étapes d'exécution de la démolition.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information réglementaire officielle — Permis de démolition",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": "urbanisme-demolition",
+        "procedure_name": "Permis de démolition",
+        "legal_reference": "Décret n° 2-18-475 du 12 juin 2019 ; décret n° 2-18-577 du 12 juin 2019 ; arrêté conjoint n° 337-20 modifié",
+        "authority": "Ministère chargé de l'urbanisme et Ministère de l'Intérieur",
+        "section": "required_documents",
+        "section_title": "Pièces obligatoires",
+        "source_title": "Arrêté conjoint n° 337-20 modifié",
+        "source_url": "https://www.aust.ma/sites/default/files/2021-09/Arr%C3%AAt%C3%A9%20n%C2%B0337-20%20modifi%C3%A9.pdf",
+        "chunk_index": 2,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-demolition-etude-003",
+      "content": "Source officielle : arrêté conjoint n° 337-20 modifié\nProcédure : Permis de démolition\nSection : Étude technique\n\nLe dossier comprend une étude technique réalisée par un ingénieur spécialisé. Elle présente le diagnostic de l'état du bâtiment, le procédé technique, les mesures préventives, publicitaires et signalétiques à mettre en oeuvre pendant l'opération, les étapes d'exécution ainsi que les mesures garantissant la sécurité et la stabilité des bâtiments avoisinants.\n\nCette exigence connaît l'exception prévue par l'arrêté pour les bâtiments à usage d'habitation individuelle non contigus dont la hauteur ne dépasse pas 8 mètres.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information réglementaire officielle — Permis de démolition",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": "urbanisme-demolition",
+        "procedure_name": "Permis de démolition",
+        "legal_reference": "Décret n° 2-18-475 du 12 juin 2019 ; décret n° 2-18-577 du 12 juin 2019 ; arrêté conjoint n° 337-20 modifié",
+        "authority": "Ministère chargé de l'urbanisme et Ministère de l'Intérieur",
+        "section": "required_documents",
+        "section_title": "Étude technique",
+        "source_title": "Arrêté conjoint n° 337-20 modifié",
+        "source_url": "https://www.aust.ma/sites/default/files/2021-09/Arr%C3%AAt%C3%A9%20n%C2%B0337-20%20modifi%C3%A9.pdf",
+        "chunk_index": 3,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-demolition-conditions-004",
+      "content": "Source officielle : arrêté conjoint n° 337-20 modifié\nProcédure : Permis de démolition\nSection : Conditions particulières\n\nLe cas échéant, le dossier comprend une attestation administrative délivrée par les services déconcentrés relevant de l'autorité gouvernementale chargée de la culture, certifiant que le bâtiment objet des travaux de démolition ne fait pas l'objet d'une inscription ou d'un classement conformément à la loi n° 22-80 relative à la conservation des monuments historiques et des sites, des inscriptions, des objets d'art et d'antiquité.\n\nDans la version modifiée de l'arrêté conjoint n° 337-20, les pièces exigibles pour la demande du permis de démolition sont fournies en un seul exemplaire.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information réglementaire officielle — Permis de démolition",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": "urbanisme-demolition",
+        "procedure_name": "Permis de démolition",
+        "legal_reference": "Décret n° 2-18-475 du 12 juin 2019 ; décret n° 2-18-577 du 12 juin 2019 ; arrêté conjoint n° 337-20 modifié",
+        "authority": "Ministère chargé de l'urbanisme et Ministère de l'Intérieur",
+        "section": "complementary_documents",
+        "section_title": "Conditions et pièces conditionnelles",
+        "source_title": "Arrêté conjoint n° 337-20 modifié",
+        "source_url": "https://www.sgg.gov.ma/Portals/0/BO/2021/BO_6992_Fr.pdf",
+        "chunk_index": 4,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-demolition-etapes-005",
+      "content": "Source officielle : modèle réglementaire de la décision portant permis de démolition\nProcédure : Permis de démolition\nSection : Étapes de la procédure\n\nLe titulaire du permis est notamment tenu d'installer à l'entrée du chantier un panneau indiquant les informations prévues par le permis. Lorsque les travaux l'exigent, une clôture doit être installée autour du chantier et la signalétique ainsi que l'éclairage nocturne doivent être mis en place le cas échéant.\n\nLe pétitionnaire doit adresser au président du conseil de la commune une notification signée par l'ingénieur spécialisé, contre accusé de réception, au moins quinze jours ouvrables avant la date fixée pour le commencement des travaux de démolition.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information réglementaire officielle — Permis de démolition",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": "urbanisme-demolition",
+        "procedure_name": "Permis de démolition",
+        "legal_reference": "Décret n° 2-18-475 du 12 juin 2019 ; décret n° 2-18-577 du 12 juin 2019 ; arrêté conjoint n° 337-20 modifié",
+        "authority": "Administration marocaine chargée de l'urbanisme",
+        "section": "procedure_milestones",
+        "section_title": "Avant le commencement des travaux",
+        "source_title": "Modèle réglementaire — Permis de démolition",
+        "source_url": "https://aute.gov.ma/s/a/library/2023-11-01/68d05187-75e9-4a3a-b9a1-b801ddb67e4c.pdf",
+        "chunk_index": 5,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-demolition-fin-006",
+      "content": "Source officielle : modèle réglementaire de la décision portant permis de démolition\nProcédure : Permis de démolition\nSection : Achèvement des travaux et cadre juridique\n\nAprès l'achèvement des travaux de démolition, le pétitionnaire doit déposer auprès de la commune concernée, contre accusé de réception, une déclaration d'achèvement des travaux. Cette déclaration porte également, le cas échéant, sur la libération du domaine public et sur l'évacuation des gravats issus de la démolition vers les décharges publiques dédiées à cet effet.\n\nUne attestation délivrée par l'ingénieur spécialisé chargé du suivi des travaux doit être jointe. Elle atteste, photographies à l'appui, que l'opération a été réalisée sans impact ni préjudice aux bâtiments avoisinants.\n\nLe cadre juridique comprend notamment le décret n° 2-18-475 du 12 juin 2019, le décret n° 2-18-577 du 12 juin 2019 et l'arrêté conjoint n° 337-20 dans sa version modifiée.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information réglementaire officielle — Permis de démolition",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": "urbanisme-demolition",
+        "procedure_name": "Permis de démolition",
+        "legal_reference": "Décret n° 2-18-475 du 12 juin 2019 ; décret n° 2-18-577 du 12 juin 2019 ; arrêté conjoint n° 337-20 modifié",
+        "authority": "Administration marocaine chargée de l'urbanisme",
+        "section": "legal_context",
+        "section_title": "Achèvement et contexte juridique",
+        "source_title": "Réglementation nationale — Permis de démolition",
+        "source_url": "https://aute.gov.ma/s/a/library/2023-11-01/68d05187-75e9-4a3a-b9a1-b801ddb67e4c.pdf",
+        "chunk_index": 6,
+        "chunk_count": 6
+      }
+    }
+  ]
+}

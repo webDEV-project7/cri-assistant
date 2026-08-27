@@ -1,0 +1,466 @@
+{
+  "version": "2025-11-06",
+  "region": "Guelmim-Oued Noun",
+  "source": {
+    "bulletin_officiel": "7454",
+    "arrete_branches": "3-51-25",
+    "arrete_activites_prioritaires": "3-52-25",
+    "arrete_prime_territoriale": "3-54-25"
+  },
+
+  "provinces": [
+    {
+      "name": "Guelmim",
+      "territorial_category": "B"
+    },
+    {
+      "name": "Tan-Tan",
+      "territorial_category": "B"
+    },
+    {
+      "name": "Sidi Ifni",
+      "territorial_category": "B"
+    },
+    {
+      "name": "Assa-Zag",
+      "territorial_category": "B"
+    }
+  ],
+
+  "sectors": [
+    {
+      "name": "Agriculture, sylviculture et pêche",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Aquaculture en mer et en zone littorale",
+          "priority_activities": [
+            "Aquaculture en mer et en zone littorale"
+          ]
+        },
+        {
+          "name": "Aquaculture en eau douce",
+          "priority_activities": [
+            "Aquaculture en eau douce"
+          ]
+        },
+        {
+          "name": "Traitement et valorisation des produits aquacoles",
+          "priority_activities": [
+            "Transformation, traitement et valorisation des produits de l’aquaculture"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Industries extractives",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Extraction de minerais métalliques",
+          "priority_activities": []
+        },
+        {
+          "name": "Services de soutien aux industries extractives",
+          "priority_activities": []
+        },
+        {
+          "name": "Valorisation et transformation des produits miniers",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Industrie manufacturière",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Industries alimentaires",
+          "priority_activities": [
+            "Transformation des produits d'origine végétale",
+            "Transformation des produits d'origine animale et production d'aliments pour animaux",
+            "Fabrication de biscuits et de biscottes, de chocolaterie, de confiserie, de produits de boulangerie-pâtisserie",
+            "Fabrication d'aliments homogénéisés et diététiques et de compléments alimentaires",
+            "Transformation, préparation et conservation des produits de la mer",
+            "Production de co-produits des produits de la mer et de l’aquaculture (alginate, oméga3, spiruline, collagène)"
+          ]
+        },
+        {
+          "name": "Fabrication de boissons",
+          "priority_activities": [
+            "Production de boissons, de café, de thé et d’infusions"
+          ]
+        },
+        {
+          "name": "Fabrication de produits à base de tabac",
+          "priority_activities": []
+        },
+        {
+          "name": "Fabrication de textiles",
+          "priority_activities": [
+            "Tissage/Bonneterie",
+            "Teinture",
+            "Finissage",
+            "Impression"
+          ]
+        },
+        {
+          "name": "Industrie de l'habillement",
+          "priority_activities": [
+            "Fabrication de l'habillement cuir",
+            "Fabrication de l'habillement textile"
+          ]
+        },
+        {
+          "name": "Industrie du cuir et de la chaussure",
+          "priority_activities": [
+            "Tannerie",
+            "Production de chaussures et de chaussures de sport",
+            "Maroquinerie"
+          ]
+        },
+        {
+          "name": "Travail du bois et fabrication d'articles en bois, en liège, en vannerie ou sparterie",
+          "priority_activities": [
+            "Sciage, rabotage et imprégnation du bois",
+            "Fabrication de panneaux de bois",
+            "Fabrication de charpentes et de menuiseries",
+            "Fabrication d'emballages en bois",
+            "Menuiserie industrielle"
+          ]
+        },
+        {
+          "name": "Industrie du papier et du carton",
+          "priority_activities": [
+            "Fabrication de papier ou de carton et des articles en papier ou en carton",
+            "Fabrication d'articles de papeterie",
+            "Fabrication d'emballages en papier ou en carton"
+          ]
+        },
+        {
+          "name": "Imprimerie et reproduction d'enregistrements",
+          "priority_activities": [
+            "Imprimerie industrielle"
+          ]
+        },
+        {
+          "name": "Industrie chimique",
+          "priority_activities": [
+            "Fabrication de produits agro-chimiques",
+            "Fabrication de peinture et vernis",
+            "Fabrication de savons, de parfums et de produits d'entretien et d’hygiène",
+            "Fabrication de produits cosmétiques"
+          ]
+        },
+        {
+          "name": "Industrie pharmaceutique",
+          "priority_activities": [
+            "Fabrication de produits pharmaceutiques de base"
+          ]
+        },
+        {
+          "name": "Industrie de fabrication des dispositifs médicaux et de matériel biomédical",
+          "priority_activities": []
+        },
+        {
+          "name": "Fabrication de produits en caoutchouc et en plastique",
+          "priority_activities": [
+            "Fabrication de produits et articles en caoutchouc",
+            "Fabrication de plaques, feuilles, tubes, profilés et emballages en matières plastiques",
+            "Fabrication d'éléments en matières plastiques pour la construction"
+          ]
+        },
+        {
+          "name": "Fabrication d'autres produits minéraux non métalliques",
+          "priority_activities": [
+            "Fabrication de verre et d'articles en verre",
+            "Fabrication de préfabriqués en béton, produits en céramique et plâtres"
+          ]
+        },
+        {
+          "name": "Métallurgie",
+          "priority_activities": [
+            "Sidérurgie",
+            "Fonderie"
+          ]
+        },
+        {
+          "name": "Fabrication de produits métalliques, à l’exception des machines et des équipements",
+          "priority_activities": [
+            "Fabrication de tubes, tuyaux, profilés creux et accessoires métalliques",
+            "Fabrication d'emballages en métal",
+            "Fabrication de produits de première transformation des métaux"
+          ]
+        },
+        {
+          "name": "Fabrication de produits informatiques, électroniques et optiques",
+          "priority_activities": [
+            "Fabrication de produits informatiques, électroniques (composants électroniques, cartes électroniques), horlogerie, instruments de mesure et d'équipements de communication",
+            "Fabrication d'appareils électroménagers et de produits électroniques grand public"
+          ]
+        },
+        {
+          "name": "Fabrication de produits et d’équipements électriques",
+          "priority_activities": [
+            "Fabrication de moteurs, génératrices, onduleurs, transformateurs électriques et de matériels de distribution et de commande électrique",
+            "Fabrication de piles et d'accumulateurs électriques"
+          ]
+        },
+        {
+          "name": "Fabrication de machines et équipements non classés ailleurs",
+          "priority_activities": [
+            "Fabrication de machines, équipements et matériels à usage agricole",
+            "Fabrication de machines, équipements et matériels destinés à l'industrie de dessalement de l'eau de mer et au recyclage de l'eau",
+            "Fabrication de machines, équipement et matériels à usage industriel",
+            "Fabrication d'articles ménagers en métal ou en céramique"
+          ]
+        },
+        {
+          "name": "Industrie automobile",
+          "priority_activities": [
+            "Activités liées à la mobilité électrique",
+            "Industrie de la micromobilité y compris les 2 et 3 roues",
+            "Fabrication des poids lourds et matériels roulants de transport",
+            "Fabrication de batterie électrique et technologies et infrastructures de recharge",
+            "Fabrication de machines-outils"
+          ]
+        },
+        {
+          "name": "Fabrication d'autres matériels de transport",
+          "priority_activities": []
+        },
+        {
+          "name": "Fabrication de meubles",
+          "priority_activities": [
+            "Fabrication de meubles"
+          ]
+        },
+        {
+          "name": "Autres industries manufacturières",
+          "priority_activities": [
+            "Traitements spéciaux des pièces aéronautiques",
+            "Fabrication d’outillages aéronautiques",
+            "Réparation, maintenance, opérations de modification d'avions",
+            "Fabrication d'éléments de cabines/de l'intérieur d'avions",
+            "Fabrication et assemblage de sous-composants ferroviaires",
+            "Peinture, revêtement anticorrosion et traitement de surfaces de sous-composants ferroviaires",
+            "Construction, maintenance et réparation de navires et de structures flottantes",
+            "Développement et assemblage de systèmes navals",
+            "Fabrication de composants dédiés aux navires"
+          ]
+        },
+        {
+          "name": "Réparation et installation de machines et d'équipements",
+          "priority_activities": []
+        },
+        {
+          "name": "Industrie des énergies renouvelables",
+          "priority_activities": [
+            "Fabrication de chauffe-eau solaires",
+            "Fabrication de composants de la chaine de valeur solaire et éolienne",
+            "Fabrication d'équipements et dispositifs de stockage d'énergie"
+          ]
+        },
+        {
+          "name": "Ingénierie et prestations techniques liées à l'industrie",
+          "priority_activities": []
+        },
+        {
+          "name": "Services de soutien aux activités industrielles",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Production d'électricité à base d'énergie renouvelable",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Production et distribution d'eau, assainissement, gestion des déchets et dépollution",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Recyclage, transformation et valorisation des déchets autres qu'importés",
+          "priority_activities": [
+            "Recyclage, transformation et valorisation des tous déchets autres qu'importés"
+          ]
+        },
+        {
+          "name": "Collecte, traitement et élimination des déchets dangereux",
+          "priority_activities": []
+        },
+        {
+          "name": "Dépollution et autres services de gestion des déchets non ménagers",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Transports et entreposage",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Entreposage et services auxiliaires des transports",
+          "priority_activities": [
+            "Entreposage et stockage frigorifique",
+            "Création d'unités logistiques aux ports"
+          ]
+        },
+        {
+          "name": "Activités de poste et de courrier",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Hébergement et restauration",
+      "tourism_activity": true,
+      "branches": [
+        {
+          "name": "Etablissements d’hébergement touristique classés à l'exception des résidences immobilières adossées à un établissement d’hébergement touristique et des résidences immobilières de promotion touristique",
+          "priority_activities": [
+            "Etablissements d’hébergement touristique classés à l'exception des résidences immobilières adossées à un établissement d’hébergement touristique et des résidences immobilières de promotion touristique"
+          ]
+        },
+        {
+          "name": "Restauration touristique",
+          "priority_activities": [
+            "Restaurants touristiques"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Artisanat",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Artisanat de production d'art et utilitaire",
+          "priority_activities": [
+            "Production de produits artisanaux à base de matières d’origine végétale ou animale, de terre, de pierre, de bois, de cuir, de matières textiles ou de métaux"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Information et communication",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Édition",
+          "priority_activities": []
+        },
+        {
+          "name": "Production de films cinématographiques, de vidéo et de programmes de télévision et enregistrement sonore et édition musicale",
+          "priority_activities": []
+        },
+        {
+          "name": "Programmation et diffusion",
+          "priority_activities": []
+        },
+        {
+          "name": "Installation des infrastructures de télécommunications",
+          "priority_activities": []
+        },
+        {
+          "name": "Programmation, conseil et autres activités informatiques",
+          "priority_activities": []
+        },
+        {
+          "name": "Services de l'information : outsourcing, centres d’appels, intelligence artificielle, traitement des données, hébergement et activités connexes, datacenters",
+          "priority_activities": [
+            "Activités liées au cloud computing, à la cybersécurité, au big data, à l’intelligence artificielle, au commerce électronique, au blockchain",
+            "Conception web",
+            "Développement et tests de logiciels et d'applications mobiles",
+            "Fabrication d’objets connectés",
+            "Centres d'appels et services de réponse"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Activités spécialisées, scientifiques et techniques",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Activités de contrôle et d'analyse technique",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Enseignement",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Formation professionnelle",
+          "priority_activities": [
+            "Création d’établissements de formation professionnelle"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Santé humaine et action sociale",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Activités pour la santé humaine",
+          "priority_activities": []
+        }
+      ]
+    },
+
+    {
+      "name": "Arts, spectacles et activités récréatives",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Activités créatives, artistiques et de spectacle",
+          "priority_activities": [
+            "Restauration de monuments historiques",
+            "Création et gestion de musée",
+            "Création de salles de cinéma",
+            "Création de salles de théâtre",
+            "Industrie des jeux vidéo (Gaming)"
+          ]
+        },
+        {
+          "name": "Activités récréatives et de loisirs",
+          "priority_activities": [
+            "Animation propre au tourisme de nature",
+            "Animation touristique autour de la gastronomie"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Autres activités de service",
+      "tourism_activity": false,
+      "branches": [
+        {
+          "name": "Réparation d'ordinateurs, d’équipements et de biens personnels et domestiques",
+          "priority_activities": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "dataset_id": "urbanisme_note_renseignements",
+  "description": "Connaissances officielles relatives à la note de renseignements urbanistiques au Maroc.",
+  "documents": [
+    {
+      "id": "cri-gon-urbanisme-nru-presentation-001",
+      "content": "Source officielle : Agence Urbaine d'Errachidia-Midelt\nThème : Note de renseignements urbanistiques\nSection : Présentation générale\n\nLa note de renseignements urbanistiques est une pièce administrative délivrée par l'agence urbaine conformément au décret n° 2.18.577 du 12 juin 2019. Elle précise l'utilisation qui peut être faite d'une propriété foncière en application des documents d'urbanisme en vigueur.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information officielle — Note de renseignements urbanistiques",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": 29,
+        "procedure_name": "Note de renseignements urbanistiques",
+        "legal_reference": "Décret n° 2.18.577 du 12 juin 2019",
+        "authority": "Agence Urbaine d'Errachidia-Midelt",
+        "section": "presentation",
+        "section_title": "Présentation générale",
+        "source_title": "Agence Urbaine d'Errachidia-Midelt — Note de renseignements urbanistique",
+        "source_url": "https://auer.gov.ma/fr/Planification%20Urbaine/Note%20de%20renseignements",
+        "chunk_index": 1,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-nru-demandeur-002",
+      "content": "Source officielle : Agence Urbaine d'Errachidia-Midelt\nThème : Note de renseignements urbanistiques\nSection : Conditions relatives au demandeur\n\nLorsque le document d'urbanisme est homologué, la demande de renseignements urbanistiques peut émaner de tout intéressé. En l'absence d'un tel document, elle ne peut émaner que du propriétaire du terrain concerné, d'une personne fournissant l'accord de ce dernier, ou d'une personne disposant d'un titre justifiant l'obtention de la note, notamment un acte déclaratif d'utilité publique.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information officielle — Note de renseignements urbanistiques",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": 29,
+        "procedure_name": "Note de renseignements urbanistiques",
+        "legal_reference": "Décret n° 2.18.577 du 12 juin 2019",
+        "authority": "Agence Urbaine d'Errachidia-Midelt",
+        "section": "required_information",
+        "section_title": "Conditions relatives au demandeur",
+        "source_title": "Agence Urbaine d'Errachidia-Midelt — Note de renseignements urbanistique",
+        "source_url": "https://auer.gov.ma/fr/Planification%20Urbaine/Note%20de%20renseignements",
+        "chunk_index": 2,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-nru-contenu-003",
+      "content": "Source officielle : Agence Urbaine d'Errachidia-Midelt\nThème : Note de renseignements urbanistiques\nSection : Informations fournies par la note\n\nLa note indique notamment la nature du document d'urbanisme applicable : plan de zonage, plan d'aménagement ou plan de développement de l'agglomération rurale. Elle indique les principales dispositions urbanistiques concernant la propriété, notamment l'affectation de la zone, les utilisations interdites, les utilisations soumises à des conditions spéciales, les possibilités maximales d'occupation et d'utilisation du sol, les conditions d'implantation des constructions, la hauteur maximale ainsi que les conditions d'accès relatives à la voirie et aux parkings.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information officielle — Note de renseignements urbanistiques",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": 29,
+        "procedure_name": "Note de renseignements urbanistiques",
+        "legal_reference": "Décret n° 2.18.577 du 12 juin 2019",
+        "authority": "Agence Urbaine d'Errachidia-Midelt",
+        "section": "required_information",
+        "section_title": "Informations fournies par la note",
+        "source_title": "Agence Urbaine d'Errachidia-Midelt — Note de renseignements urbanistique",
+        "source_url": "https://auer.gov.ma/fr/Planification%20Urbaine/Note%20de%20renseignements",
+        "chunk_index": 3,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-nru-delai-004",
+      "content": "Source officielle : Agence Urbaine d'Errachidia-Midelt\nThème : Note de renseignements urbanistiques\nSection : Délai et validité\n\nLa source officielle indique que la note de renseignements urbanistiques est délivrée par l'agence urbaine dans un délai ne dépassant pas deux jours ouvrables. La durée de validité de la note correspond à la durée pendant laquelle produisent effet les dispositions juridiques du document d'urbanisme en vigueur auxquelles elle se rapporte.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information officielle — Note de renseignements urbanistiques",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": 29,
+        "procedure_name": "Note de renseignements urbanistiques",
+        "legal_reference": "Décret n° 2.18.577 du 12 juin 2019",
+        "authority": "Agence Urbaine d'Errachidia-Midelt",
+        "section": "procedure_milestones",
+        "section_title": "Délai et validité",
+        "source_title": "Agence Urbaine d'Errachidia-Midelt — Note de renseignements urbanistique",
+        "source_url": "https://auer.gov.ma/fr/Planification%20Urbaine/Note%20de%20renseignements",
+        "chunk_index": 4,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-nru-documents-005",
+      "content": "Source officielle : Agence Urbaine d'Errachidia-Midelt\nThème : Note de renseignements urbanistiques\nSection : Pièces à fournir\n\nLa source officielle consultée ne fournit pas, dans la page d'information, une liste détaillée des pièces à joindre. Elle indique que les pièces à fournir pour obtenir la note sont mentionnées sur la fiche de demande. Aucune liste supplémentaire de documents ne doit donc être déduite de cette source.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information officielle — Note de renseignements urbanistiques",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": 29,
+        "procedure_name": "Note de renseignements urbanistiques",
+        "legal_reference": "Décret n° 2.18.577 du 12 juin 2019",
+        "authority": "Agence Urbaine d'Errachidia-Midelt",
+        "section": "required_documents",
+        "section_title": "Pièces à fournir",
+        "source_title": "Agence Urbaine d'Errachidia-Midelt — Note de renseignements urbanistique",
+        "source_url": "https://auer.gov.ma/fr/Planification%20Urbaine/Note%20de%20renseignements",
+        "chunk_index": 5,
+        "chunk_count": 6
+      }
+    },
+    {
+      "id": "cri-gon-urbanisme-nru-juridique-006",
+      "content": "Source officielle : Secrétariat Général du Gouvernement\nThème : Cadre juridique de la note de renseignements urbanistiques\nSection : Contexte juridique\n\nLe décret n° 2.18.577 du 12 juin 2019 approuve le règlement général de construction fixant la forme et les conditions de délivrance des autorisations et des pièces exigibles en application de la législation relative à l'urbanisme, aux lotissements, aux groupes d'habitations et aux morcellements. La note de renseignements est établie sur la base des données fournies par le pétitionnaire. Elle ne peut pas attester de la véracité de ces données et ne vaut pas accord de principe pour la réalisation d'un projet.",
+      "metadata": {
+        "archived": false,
+        "category": "Autorisations urbanistiques",
+        "document_type": "Information officielle — Note de renseignements urbanistiques",
+        "language": "fr",
+        "publication_date": "Non précisée",
+        "retrieval_date": "2026-08-27",
+        "source_kind": "official_procedure",
+        "official_source": true,
+        "procedure_id": 29,
+        "procedure_name": "Note de renseignements urbanistiques",
+        "legal_reference": "Décret n° 2.18.577 du 12 juin 2019",
+        "authority": "Secrétariat Général du Gouvernement",
+        "section": "legal_context",
+        "section_title": "Contexte juridique",
+        "source_title": "Bulletin officiel — Décret n° 2.18.577",
+        "source_url": "https://www.sgg.gov.ma/BO/bo_ar/2019/BO_6793_Ar.pdf",
+        "chunk_index": 6,
+        "chunk_count": 6
+      }
+    }
+  ]
+}

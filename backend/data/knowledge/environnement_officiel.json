@@ -1,0 +1,120 @@
+{
+  "dataset_id": "environnement_officiel_maroc",
+  "description": "Connaissances officielles complementaires relatives a l\u2019evaluation environnementale au Maroc.",
+  "documents": [
+    {
+      "content": "Source officielle : Departement du Developpement Durable\nTheme : Evaluation environnementale\n\nL\u2019evaluation environnementale integre les aspects environnementaux et sociaux d\u2019un projet, d\u2019un plan, d\u2019un programme ou d\u2019une politique publique afin d\u2019evaluer les impacts previsibles et d\u2019analyser les options acceptables. Elle comprend notamment l\u2019evaluation environnementale strategique, l\u2019Etude d\u2019Impact sur l\u2019Environnement (EIE), la Notice d\u2019Impact sur l\u2019Environnement (NIE) et l\u2019Audit Environnemental. Le cadre juridique general indique par le portail officiel est la loi n\u00b0 49-17 relative a l\u2019evaluation environnementale.",
+      "id": "env-maroc-evaluation-environnementale-001",
+      "metadata": {
+        "archived": false,
+        "authority": "Ministere de la Transition Energetique et du Developpement Durable - Departement du Developpement Durable",
+        "category": "Acceptabilit\u00e9 des projets",
+        "document_type": "Information administrative officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 49-17",
+        "official_source": true,
+        "publication_date": "Non precisee par la source",
+        "retrieval_date": "2026-08-26",
+        "section": "evaluation_environmentale",
+        "source_kind": "environment_official_web",
+        "source_title": "Departement du Developpement Durable \u2014 Evaluation environnementale",
+        "source_url": "https://e-services.environnement.gov.ma/faqA/2"
+      }
+    },
+    {
+      "content": "Source officielle : Departement du Developpement Durable\nTheme : Etude d\u2019Impact sur l\u2019Environnement (EIE)\n\nL\u2019EIE est un instrument preventif de gestion et de protection de l\u2019environnement. Elle doit etre realisee avant l\u2019autorisation de realisation du projet et permet d\u2019evaluer les impacts directs et indirects et de definir les mesures d\u2019evitement, d\u2019attenuation ou de compensation. Le portail officiel cite notamment les lois n\u00b0 12-03, 47-18 et 49-17 ainsi que les decrets n\u00b0 2-04-563 et 2-04-564. Pour l\u2019obtention de l\u2019acceptabilite environnementale des projets soumis a l\u2019EIE, le portail mentionne le formulaire de demande d\u2019enquete publique, le rapport d\u2019EIE et le Programme de Surveillance et de Suivi Environnemental (PSSE) ou le Cahier des Charges sur l\u2019Environnement. L\u2019administration ne facture pas l\u2019instruction du dossier. En revanche, la realisation de l\u2019EIE et les frais lies a l\u2019enquete publique restent a la charge du petitionnaire.",
+      "id": "env-maroc-eie-cadre-documents-cout-001",
+      "metadata": {
+        "archived": false,
+        "authority": "Ministere de la Transition Energetique et du Developpement Durable - Departement du Developpement Durable",
+        "category": "Acceptabilit\u00e9 des projets",
+        "document_type": "Information administrative officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 12-03 ; Loi n\u00b0 47-18 ; Loi n\u00b0 49-17 ; Decret n\u00b0 2-04-563 ; Decret n\u00b0 2-04-564",
+        "official_source": true,
+        "publication_date": "Non precisee par la source",
+        "retrieval_date": "2026-08-26",
+        "section": "eie_complement",
+        "source_kind": "environment_official_web",
+        "source_title": "Departement du Developpement Durable \u2014 Evaluation environnementale",
+        "source_url": "https://e-services.environnement.gov.ma/faqA/2"
+      }
+    },
+    {
+      "content": "Source officielle : Departement du Developpement Durable\nTheme : Notice d\u2019Impact sur l\u2019Environnement (NIE)\n\nLa Notice d\u2019Impact sur l\u2019Environnement est une etude concise realisee avant la mise en oeuvre de projets qui ne sont pas assujettis a une Etude d\u2019Impact sur l\u2019Environnement mais qui peuvent avoir de faibles impacts negatifs sur l\u2019environnement en raison notamment de leur duree, de leur nature, de leur dimension ou de leur lieu d\u2019implantation. Elle permet d\u2019evaluer ces impacts et de definir les mesures permettant de les eviter, les attenuer ou les compenser, tout en valorisant les impacts positifs. Son cadre juridique est la loi n\u00b0 49-17 relative a l\u2019evaluation environnementale.",
+      "id": "env-maroc-nie-presentation-001",
+      "metadata": {
+        "archived": false,
+        "authority": "Ministere de la Transition Energetique et du Developpement Durable - Departement du Developpement Durable",
+        "category": "Acceptabilit\u00e9 des projets",
+        "document_type": "Information administrative officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 49-17",
+        "official_source": true,
+        "publication_date": "Non precisee par la source",
+        "retrieval_date": "2026-08-26",
+        "section": "nie_presentation",
+        "source_kind": "environment_official_web",
+        "source_title": "Departement du Developpement Durable \u2014 Evaluation environnementale",
+        "source_url": "https://e-services.environnement.gov.ma/faqA/2"
+      }
+    },
+    {
+      "content": "Source officielle : Departement du Developpement Durable\nTheme : Notice d\u2019Impact sur l\u2019Environnement (NIE)\n\nPour les projets soumis a la NIE, le document necessaire indique par le portail officiel pour l\u2019obtention de l\u2019acceptabilite environnementale est le rapport de la Notice d\u2019Impact sur l\u2019Environnement. Le portail precise qu\u2019aucun frais n\u2019est exige par l\u2019administration pour l\u2019instruction du dossier de NIE.",
+      "id": "env-maroc-nie-documents-cout-001",
+      "metadata": {
+        "archived": false,
+        "authority": "Ministere de la Transition Energetique et du Developpement Durable - Departement du Developpement Durable",
+        "category": "Acceptabilit\u00e9 des projets",
+        "document_type": "Information administrative officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 49-17",
+        "official_source": true,
+        "publication_date": "Non precisee par la source",
+        "retrieval_date": "2026-08-26",
+        "section": "nie_documents_cost",
+        "source_kind": "environment_official_web",
+        "source_title": "Departement du Developpement Durable \u2014 Evaluation environnementale",
+        "source_url": "https://e-services.environnement.gov.ma/faqA/2"
+      }
+    },
+    {
+      "content": "Source officielle : Departement du Developpement Durable\nTheme : Audit environnemental\n\nL\u2019Audit Environnemental est une etude permettant d\u2019evaluer les impacts directs ou indirects, temporaires ou permanents, des unites industrielles ou activites existantes avant la publication de la loi n\u00b0 49-17 au Bulletin officiel et qui figurent parmi les projets soumis a l\u2019Etude d\u2019Impact sur l\u2019Environnement. Il vise a definir les mesures necessaires pour leur mise en conformite avec les lois et normes environnementales en vigueur. Le cadre juridique mentionne par le portail officiel est la loi n\u00b0 49-17.",
+      "id": "env-maroc-audit-presentation-001",
+      "metadata": {
+        "archived": false,
+        "authority": "Ministere de la Transition Energetique et du Developpement Durable - Departement du Developpement Durable",
+        "category": "Acceptabilit\u00e9 des projets",
+        "document_type": "Information administrative officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 49-17",
+        "official_source": true,
+        "publication_date": "Non precisee par la source",
+        "retrieval_date": "2026-08-26",
+        "section": "audit_presentation",
+        "source_kind": "environment_official_web",
+        "source_title": "Departement du Developpement Durable \u2014 Evaluation environnementale",
+        "source_url": "https://e-services.environnement.gov.ma/faqA/2"
+      }
+    },
+    {
+      "content": "Source officielle : Departement du Developpement Durable\nTheme : Audit environnemental\n\nPour l\u2019obtention du Certificat de conformite environnementale dans le cadre de l\u2019Audit Environnemental, le portail officiel mentionne : la demande et le dossier d\u2019obtention du certificat, le rapport d\u2019Audit Environnemental et le Cahier des Charges Environnementales. Le portail indique qu\u2019aucun frais n\u2019est exige par l\u2019administration pour l\u2019instruction du dossier d\u2019Audit Environnemental.",
+      "id": "env-maroc-audit-documents-cout-001",
+      "metadata": {
+        "archived": false,
+        "authority": "Ministere de la Transition Energetique et du Developpement Durable - Departement du Developpement Durable",
+        "category": "Acceptabilit\u00e9 des projets",
+        "document_type": "Information administrative officielle",
+        "language": "fr",
+        "legal_reference": "Loi n\u00b0 49-17",
+        "official_source": true,
+        "publication_date": "Non precisee par la source",
+        "retrieval_date": "2026-08-26",
+        "section": "audit_documents_cost",
+        "source_kind": "environment_official_web",
+        "source_title": "Departement du Developpement Durable \u2014 Evaluation environnementale",
+        "source_url": "https://e-services.environnement.gov.ma/faqA/2"
+      }
+    }
+  ]
+}
