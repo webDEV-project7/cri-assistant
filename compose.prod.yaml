@@ -210,6 +210,52 @@ services:
     security_opt:
       - no-new-privileges:true
 
+  # ==========================================================
+  # Synchronisation facultative des procédures CRI
+  #
+  # Ce service appartient au profil "maintenance".
+  # Il ne bloque jamais le démarrage normal du portail.
+  # ==========================================================
+
+  procedures-sync:
+    profiles:
+      - maintenance
+
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+
+    restart: "no"
+
+    depends_on:
+      chroma:
+        condition: service_healthy
+
+      ollama-model-init:
+        condition: service_completed_successfully
+
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      CHROMA_COLLECTION: ${CHROMA_COLLECTION:-cri_documents}
+
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:?OLLAMA_EMBEDDING_MODEL required}
+
+      CRI_PROCEDURES_API_URL: ${CRI_PROCEDURES_API_URL:-https://www.cri-invest.ma/backend/api/procedures}
+
+    command:
+      - python
+      - -m
+      - app.import_cri_procedures
+
+    networks:
+      - data_network
+      - ai_network
+
+    security_opt:
+      - no-new-privileges:true
+
   backend:
     build:
       context: ./backend
