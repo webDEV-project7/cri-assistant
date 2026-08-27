@@ -1,0 +1,372 @@
+name: cri-assistant-prod
+
+services:
+
+  # ==========================================================
+  # PostgreSQL
+  # ==========================================================
+
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB required}
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD required}
+
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+
+    networks:
+      - data_network
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+    security_opt:
+      - no-new-privileges:true
+
+
+  # ==========================================================
+  # ChromaDB
+  # ==========================================================
+
+  chroma:
+    build:
+      context: ./chroma
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+
+    expose:
+      - "8000"
+
+    volumes:
+      - chroma_prod_data:/data
+
+    networks:
+      - data_network
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-f",
+          "http://127.0.0.1:8000/api/v2/heartbeat"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+
+    security_opt:
+      - no-new-privileges:true
+
+
+  # ==========================================================
+  # Ollama
+  #
+  # Pas de GPU obligatoire ici :
+  # cette configuration reste portable sur serveur CPU.
+  # Un override GPU pourra être ajouté plus tard.
+  # ==========================================================
+
+  ollama:
+    image: ${OLLAMA_IMAGE:-ollama/ollama:latest}
+
+    restart: unless-stopped
+
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+
+    expose:
+      - "11434"
+
+    volumes:
+      - ollama_prod_data:/root/.ollama
+
+    networks:
+      - ai_network
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "ollama",
+          "list"
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 15s
+
+    security_opt:
+      - no-new-privileges:true
+
+
+  # ==========================================================
+  # Bootstrap modèle Ollama
+  #
+  # Sur un serveur neuf le volume est vide.
+  # Ce service télécharge le modèle avant le backend.
+  # ==========================================================
+
+  ollama-model-init:
+    image: ${OLLAMA_IMAGE:-ollama/ollama:latest}
+
+    restart: "no"
+
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+    entrypoint:
+      - /bin/sh
+      - -lc
+
+    command:
+      - >
+        set -eu
+        ollama pull "${OLLAMA_MODEL:?OLLAMA_MODEL required}"
+        ollama pull "${OLLAMA_EMBEDDING_MODEL:?OLLAMA_EMBEDDING_MODEL required}"
+
+    networks:
+      - ai_network
+
+    security_opt:
+      - no-new-privileges:true
+
+
+  # ==========================================================
+  # Backend production
+  # ==========================================================
+
+  # ==========================================================
+  # Bootstrap RAG local
+  # Indexation idempotente des snapshots officiels locaux.
+  # Les procédures API externes ne bloquent pas le démarrage.
+  # ==========================================================
+
+  rag-init:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+
+    restart: "no"
+
+    depends_on:
+      chroma:
+        condition: service_healthy
+
+      ollama-model-init:
+        condition: service_completed_successfully
+
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      CHROMA_COLLECTION: ${CHROMA_COLLECTION:-cri_documents}
+
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:?OLLAMA_EMBEDDING_MODEL required}
+
+    entrypoint:
+      - /bin/sh
+      - -lc
+
+    command:
+      - |
+        set -eu
+        echo "[RAG] Import création entreprise"
+        python -m app.import_cri_gon_knowledge
+
+        echo "[RAG] Import environnement"
+        python -m app.import_environment_knowledge
+
+        echo "[RAG] Import note de renseignements urbanistiques"
+        python -m app.import_cri_gon_knowledge --snapshot /app/data/knowledge/urbanisme_note_renseignements.json
+
+        echo "[RAG] Import permis de démolition"
+        python -m app.import_cri_gon_knowledge --snapshot /app/data/knowledge/urbanisme_permis_demolition.json
+
+        echo "[RAG] Bootstrap local terminé"
+
+    networks:
+      - data_network
+      - ai_network
+
+    security_opt:
+      - no-new-privileges:true
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+
+    restart: unless-stopped
+    init: true
+
+    depends_on:
+
+      postgres:
+        condition: service_healthy
+
+      chroma:
+        condition: service_healthy
+
+      ollama-model-init:
+        condition: service_completed_successfully
+
+      rag-init:
+        condition: service_completed_successfully
+
+    environment:
+
+      DATABASE_URL: >-
+        postgresql+psycopg://${POSTGRES_USER:?POSTGRES_USER required}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD required}@postgres:5432/${POSTGRES_DB:?POSTGRES_DB required}
+
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      CHROMA_COLLECTION: ${CHROMA_COLLECTION:-cri_documents}
+
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:?OLLAMA_MODEL required}
+      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:?OLLAMA_EMBEDDING_MODEL required}
+
+      LLM_PROVIDER: ${LLM_PROVIDER:-deepseek}
+      LLM_FALLBACK_PROVIDER: ${LLM_FALLBACK_PROVIDER:-ollama}
+
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-v4-pro}
+      DEEPSEEK_TIMEOUT_SECONDS: ${DEEPSEEK_TIMEOUT_SECONDS:-60}
+
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+      GROQ_TIMEOUT_SECONDS: ${GROQ_TIMEOUT_SECONDS:-60}
+
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+
+    expose:
+      - "8000"
+
+    networks:
+      - application_network
+      - data_network
+      - ai_network
+
+    security_opt:
+      - no-new-privileges:true
+
+
+  # ==========================================================
+  # Frontend Next.js production
+  # ==========================================================
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+
+    restart: unless-stopped
+    init: true
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+    environment:
+      INTERNAL_API_URL: http://backend:8000
+      NEXT_PUBLIC_API_URL: /api
+      NEXT_TELEMETRY_DISABLED: "1"
+
+    expose:
+      - "3000"
+
+    networks:
+      - application_network
+
+    security_opt:
+      - no-new-privileges:true
+
+
+  # ==========================================================
+  # Nginx
+  # ==========================================================
+
+  proxy:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+    init: true
+
+    depends_on:
+
+      backend:
+        condition: service_healthy
+
+      frontend:
+        condition: service_healthy
+
+    ports:
+      - "${APP_BIND_IP:-127.0.0.1}:${APP_PORT:-8081}:8080"
+
+    networks:
+      - application_network
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
+
+
+# ============================================================
+# Volumes production
+#
+# Complètement séparés des volumes de développement.
+# ============================================================
+
+volumes:
+
+  postgres_prod_data:
+    name: cri_pfa_prod_postgres_data
+
+  chroma_prod_data:
+    name: cri_pfa_prod_chroma_data
+
+  ollama_prod_data:
+    name: cri_pfa_prod_ollama_data
+
+
+# ============================================================
+# Réseaux production
+# ============================================================
+
+networks:
+
+  application_network:
+    driver: bridge
+
+  data_network:
+    driver: bridge
+    internal: true
+
+  ai_network:
+    driver: bridge
+
+

@@ -57,3 +57,6 @@ audit_*.txt
 backend/tests/manual_api/
 diagnostic_*.zip
 observability/grafana/dashboard-backups/
+
+# Exemple environnement production versionnable
+!.env.prod.example
