@@ -18,7 +18,17 @@ Projet conçu et développé en autonomie par **Mouloud Boutqlmount** pendant mo
 
 ## Aperçu de l'interface
 
-<!-- CAPTURES : glisser-déposer les images de l'interface ici -->
+### Accueil : portail régional de l'investissement
+![Page d'accueil](docs/screenshots/accueil.png)
+
+### Assistant IA : réponses sur les démarches et les dispositifs d'aide
+![Assistant IA](docs/screenshots/assistant-ia.png)
+
+### Simulateur de primes : calcul déterministe selon la Charte de l'investissement
+![Simulateur de primes](docs/screenshots/simulateur-primes.png)
+
+### Analyse documentaire : pré-vérification des pièces par OCR
+![Analyse des documents](docs/screenshots/analyse-documents.png)
 
 ---
 
@@ -39,6 +49,11 @@ Les porteurs de projet qui s'adressent à un CRI posent souvent les mêmes quest
 
 ## Architecture
 
+![Architecture de CRI Assistant](docs/screenshots/architecture.png)
+
+<details>
+<summary>Vue simplifiée du flux de l'agent</summary>
+
 ```mermaid
 flowchart LR
     U[Investisseur] --> F[Frontend Next.js]
@@ -53,6 +68,8 @@ flowchart LR
     B --> P[(PostgreSQL)]
 ```
 
+</details>
+
 ## Stack technique
 
 | Couche | Technologies |
@@ -63,7 +80,8 @@ flowchart LR
 | Backend | Python, FastAPI, PostgreSQL |
 | Frontend | Next.js |
 | Déploiement | Docker, Docker Compose, Nginx |
-| Observabilité | Grafana, Loki, Alloy |
+| Observabilité | Grafana, Loki, Alloy, LangSmith (suivi des chaînes IA) |
+| Sécurité | HTTPS, authentification JWT |
 | Qualité | 272 tests automatisés |
 
 ## Structure du projet
@@ -75,6 +93,7 @@ cri-assistant/
 ├── chroma/           # Base vectorielle ChromaDB
 ├── nginx/            # Configuration du reverse proxy
 ├── observability/    # Supervision et logs
+├── docs/screenshots/ # Captures de l'interface et schéma d'architecture
 ├── compose.yaml      # Environnement de développement
 ├── compose.prod.yaml # Environnement de production
 ├── .env.example      # Variables d'environnement (développement)
